@@ -7,11 +7,10 @@ provider "awsutils" {
 }
 
 module "vpc" {
-  source  = "registry.terraform.io/SevenPico/vpc/aws"
-  version = "3.0.0"
+  source = "git::https://github.com/raringgroup/terraform-aws-vpc.git?ref=v0.1.0"
 
   ipv4_primary_cidr_block = "172.16.0.0/16"
-  context = module.context.self
+  context                 = module.context.self
 }
 
 resource "aws_route53_zone" "private_dns_zone" {
