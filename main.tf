@@ -16,7 +16,7 @@
 ##
 ## Modified from upstream cloudposse/terraform-aws-ses (0.23.0) by Raring Group LLC:
 ## uses the Raring Group context module (module.context, including its domain_name) in place of cloudposse/label/null and var.domain,
-## and sources iam-system-user from a Raring Group fork (2.0.2) with additional pass-through inputs.
+## and vendors the iam-system-user module (derived from cloudposse/terraform-aws-iam-system-user) in modules/iam-system-user.
 ## ----------------------------------------------------------------------------
 
 /*
@@ -102,8 +102,7 @@ resource "aws_iam_user_group_membership" "ses_user" {
 }
 
 module "ses_user" {
-  source     = "registry.terraform.io/SevenPicoForks/iam-system-user/aws"
-  version    = "2.0.2"
+  source     = "./modules/iam-system-user"
   context    = module.context.self
   enabled    = module.context.enabled && local.create_user_enabled
   attributes = ["ses", "user"]
