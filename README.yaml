@@ -20,6 +20,16 @@ categories:
 
 # License of this project
 license: "APACHE2"
+
+# Copyrights
+copyrights:
+  - name: "Raring Group LLC"
+    url: "https://github.com/raringgroup"
+    year: "2026"
+  - name: "Cloud Posse, LLC"
+    url: "https://cloudposse.com"
+    year: "2020"
+
 # Canonical GitHub repo
 github_repo: cloudposse/terraform-aws-ses
 # Badges to display
