@@ -1,4 +1,5 @@
 ## ----------------------------------------------------------------------------
+## Copyright 2020 Cloud Posse, LLC
 ## Copyright 2026 Raring Group LLC
 ##
 ## Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,6 +13,10 @@
 ## WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ## See the License for the specific language governing permissions and
 ## limitations under the License.
+##
+## Modified from upstream cloudposse/terraform-aws-ses (0.23.0) by Raring Group LLC:
+## uses the Raring Group context module (module.context, including its domain_name) in place of cloudposse/label/null and var.domain,
+## and sources iam-system-user from SevenPicoForks/iam-system-user/aws 2.0.2 with additional pass-through inputs.
 ## ----------------------------------------------------------------------------
 
 /*

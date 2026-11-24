@@ -1,0 +1,13 @@
+terraform-aws-ses
+Copyright 2026 Raring Group LLC
+
+This product includes software developed by Raring Group LLC (https://github.com/raringgroup).
+
+Portions of this software are derived from terraform-aws-ses (https://github.com/cloudposse/terraform-aws-ses),
+Copyright 2020 Cloud Posse, LLC, licensed under the Apache License, Version 2.0.
+The _context.tf files are derived from terraform-null-label (https://github.com/cloudposse/terraform-null-label),
+Copyright 2017-2020 Cloud Posse, LLC, licensed under the Apache License, Version 2.0.
+Modifications by Raring Group LLC (relative to upstream 0.23.0):
+- Replaced the upstream cloudposse/label/null module (context.tf, module.this) with the Raring Group context module (_context.tf, module.context); the SES domain now comes from the context domain_name instead of the `domain` variable.
+- Replaced cloudposse/iam-system-user/aws 0.23.2 with SevenPicoForks/iam-system-user/aws 2.0.2 and added IAM user and SSM pass-through variables.
+- examples/complete: uses the Raring Group terraform-aws-vpc fork; removed the `region` and `domain` variables.
