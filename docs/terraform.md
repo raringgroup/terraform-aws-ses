@@ -17,7 +17,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ses_user"></a> [ses\_user](#module\_ses\_user) | iam-system-user/aws (Raring Group fork, see main.tf) | 2.0.2 |
+| <a name="module_ses_user"></a> [ses\_user](#module\_ses\_user) | ./modules/iam-system-user | n/a |
 | <a name="module_context"></a> [context](#module\_context) | git::https://github.com/raringgroup/terraform-null-context.git?ref=v0.1.0 | n/a |
 
 ## Resources
