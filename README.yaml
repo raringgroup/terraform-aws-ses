@@ -31,20 +31,24 @@ copyrights:
     year: "2020"
 
 # Canonical GitHub repo
-github_repo: cloudposse/terraform-aws-ses
-# Badges to display
-badges:
-  - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/terraform-aws-ses.svg"
-    url: "https://github.com/cloudposse/terraform-aws-ses/releases/latest"
-  - name: "Slack Community"
-    image: "https://slack.cloudposse.com/badge.svg"
-    url: "https://slack.cloudposse.com"
+github_repo: RaringGroup/terraform-aws-ses
 # Short description of this project
 description: |-
   Terraform module to provision Simple Email Service on AWS.
 # How to use this project
 usage: |-
+  ```hcl
+  module "ses" {
+    source = "git::https://github.com/raringgroup/terraform-aws-ses.git?ref=v0.1.0"
+
+    context = module.context.self
+
+    zone_id = var.zone_id
+  }
+  ```
+
+  Naming and tagging come from [`terraform-null-context`](https://github.com/raringgroup/terraform-null-context). Add `_context.tf` to the calling configuration and pass `context = module.context.self`. The SES domain is taken from the context `domain_name`.
+
   This module creates a SES domain with IAM user that is able to send emails with it.
   If module is provided with Route53 Zone ID it can also create verification DNS records for domain and DKIM.
 
@@ -68,7 +72,3 @@ usage: |-
 include:
   - "docs/targets.md"
   - "docs/terraform.md"
-# Contributors to this project
-contributors:
-  - name: "Marcin Brański"
-    github: "3h4x"

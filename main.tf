@@ -16,7 +16,7 @@
 ##
 ## Modified from upstream cloudposse/terraform-aws-ses (0.23.0) by Raring Group LLC:
 ## uses the Raring Group context module (module.context, including its domain_name) in place of cloudposse/label/null and var.domain,
-## and sources iam-system-user from SevenPicoForks/iam-system-user/aws 2.0.2 with additional pass-through inputs.
+## and sources iam-system-user from a Raring Group fork (2.0.2) with additional pass-through inputs.
 ## ----------------------------------------------------------------------------
 
 /*
